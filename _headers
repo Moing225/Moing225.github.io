@@ -1,0 +1,67 @@
+# ==============================================================================
+# _headers —— Cloudflare Pages 专用的响应头配置
+# ==============================================================================
+# 只在「Cloudflare Pages」上生效。
+#   * GitHub Pages 不支持自定义响应头,会直接忽略本文件(CI 产物里也不包含它)。
+#   * Cloudflare「DNS + 代理」模式(站点源站在 GitHub Pages)也不读本文件,
+#     那种情况请用 Cloudflare 面板的 Rules / Cache Rules,见 docs/deploy-cloudflare.md 第 3 节。
+#
+# 语法:第 1 行写路径规则,紧跟着缩进的若干行写「响应头名: 值」;规则之间空一行。
+#   * 路径支持 * 通配(只能有一个)和 :placeholder 占位。
+#   * 同一路径命中多条规则时,响应头会累加;同名响应头会被逗号合并,
+#     所以同一个头不要在多条规则里重复设置(下面已经按「一个头只设一次」排好)。
+#   * 以 # 开头的行是注释;最多 100 条规则。
+#
+# 重要(内容安全策略):下面 CSP 里写的是 script-src 'self',
+# 意思是只允许执行本站自己的 .js 文件。如果页面里出现
+#   <script> 内联代码 </script>  或  onclick="..."  这类内联脚本,
+# 浏览器会拦截并把报错打到控制台(白屏/点了没反应)。遇到这种页面,
+# 就把该行的 script-src 'self' 改成 script-src 'self' 'unsafe-inline'。
+# 样式(style-src)已经允许内联,因为 <style> 和 style="..." 很常见。
+# ==============================================================================
+
+# ---------- 1. 全站安全响应头(不在这里设 Cache-Control,见下面分组) ----------
+# HSTS 故意没加 includeSubDomains:你名下别的子域可能还是 http,加上会把它们一起搞坏。
+# 等所有子域都上了 https,再手动把这一行末尾改成 "; includeSubDomains"。
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=()
+  Cross-Origin-Opener-Policy: same-origin
+  Strict-Transport-Security: max-age=31536000
+  Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'; object-src 'none'
+
+# ---------- 2. HTML:每次都回源校验,保证改了立刻能看到 ----------
+/
+  Cache-Control: public, max-age=0, must-revalidate
+  Content-Type: text/html; charset=utf-8
+
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+  Content-Type: text/html; charset=utf-8
+
+# ---------- 3. 静态资源:长缓存 + immutable ----------
+# 文件名没有哈希,所以「换了同名文件」时必须做二次操作之一:
+#   a) 在 HTML 里给引用加版本号,例如 href="assets/css/style.css?v=20261017";
+#   b) 部署后到 Cloudflare 面板 Caching → Configuration → Purge Everything。
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# ---------- 4. 内容类型:显式声明,避免边缘按扩展名猜错 ----------
+# 只给「可能被猜错」的文本资源写;图片和 ico 由 Cloudflare 按扩展名给对,不用管。
+# 注意:这几条和上面的 /assets/* 会同时命中,但设置的不是同一个响应头,不会互相覆盖。
+/assets/css/*
+  Content-Type: text/css; charset=utf-8
+
+/assets/js/*
+  Content-Type: text/javascript; charset=utf-8
+
+# ---------- 5. 数据文件:短缓存,部署后几分钟内自动生效 ----------
+/data/*
+  Cache-Control: public, max-age=600, must-revalidate
+  Content-Type: application/json; charset=utf-8
+
+# ---------- 6. 杂项 ----------
+/favicon.ico
+  Cache-Control: public, max-age=604800

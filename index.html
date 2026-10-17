@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>股东名册 · 莫影的个人网站</title>
+  <meta name="description" content="莫影的个人网站股东名册，收录站内全部股东及其赞助金额，按金额降序排列，支持按姓名检索。">
+  <meta name="theme-color" content="#F7F1E1">
+  <meta name="theme-color" content="#14110E" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:site_name" content="莫影的个人网站">
+  <meta property="og:title" content="股东名册 · 莫影的个人网站">
+  <meta property="og:description" content="莫影的个人网站股东名册，收录站内全部股东及其赞助金额，按金额降序排列，支持按姓名检索。">
+  <meta property="og:image" content="assets/img/logo-square-512.png">
+  <meta property="og:image:alt" content="TK联合协会徽标">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/logo-192.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/shareholder-data.js"></script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body class="page page--home">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="莫影的个人网站 · 首页">
+        <span class="brand-mark logo-shell" data-logo-shell>
+          <span class="mark-fallback" aria-hidden="true">TK</span>
+          <img class="brand-logo" src="assets/img/logo-64.png" width="64" height="64" alt="TK联合协会徽标">
+        </span>
+        <span class="brand-copy">
+          <span class="brand-name">莫影的个人网站</span>
+          <span class="brand-sub">TK联合协会 · 个人网站</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="index.html" aria-current="page">股东名册</a>
+        <a href="about.html">关于</a>
+        <a href="projects.html">项目</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="page-title">
+      <span class="hero-watermark" aria-hidden="true">册</span>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="eyebrow-seal" aria-hidden="true">TK</span>
+            <span>TK联合协会 <span class="eyebrow-dot" aria-hidden="true">·</span> 公开名录</span>
+          </p>
+          <div class="title-row">
+            <h1 id="page-title">股东名册</h1>
+            <span class="title-side" aria-hidden="true">
+              <span>SHAREHOLDER</span>
+              <span>REGISTRY</span>
+            </span>
+          </div>
+          <p class="hero-lede">每一份支持都以姓名与金额入册。名册按赞助金额由高到低排列，同额并列同一名次。</p>
+
+          <div class="stat-grid" role="group" aria-label="名册概览">
+            <div class="stat-card">
+              <p class="stat-label">股东人数</p>
+              <p class="stat-value">
+                <span class="stat-number" id="stat-count" data-stat-count data-registry-value="count">—</span>
+                <span class="stat-unit">位</span>
+              </p>
+            </div>
+            <div class="stat-card">
+              <p class="stat-label">累计赞助</p>
+              <p class="stat-value">
+                <span class="stat-currency" aria-hidden="true">¥</span>
+                <span class="stat-number" id="stat-total" data-stat-total data-registry-value="total">—</span>
+              </p>
+            </div>
+            <div class="stat-card">
+              <p class="stat-label">数据更新</p>
+              <p class="stat-value">
+                <span class="stat-number stat-number--date" id="stat-updated" data-stat-updated data-registry-value="updated">—</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-seal" aria-label="TK联合协会徽标">
+          <div class="seal-frame">
+            <div class="seal-logo-shell logo-shell" data-logo-shell>
+              <span class="seal-fallback" aria-hidden="true">
+                <span class="seal-fallback-big">TK</span>
+                <span class="seal-fallback-small">联合协会</span>
+              </span>
+              <img class="seal-logo" src="assets/img/logo-512.png" width="512" height="512" alt="TK联合协会徽标">
+            </div>
+            <span class="seal-stamp" aria-hidden="true">名册<br>存证</span>
+            <span class="seal-coordinate" aria-hidden="true">TK · PUBLIC REGISTER</span>
+          </div>
+          <p class="seal-caption">
+            <span class="seal-caption-main">TK联合协会</span>
+            <span class="seal-caption-sub">股东名册 · 公开名录</span>
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="registry" aria-labelledby="registry-title">
+      <div class="wrap">
+        <div class="registry-panel">
+          <header class="registry-head">
+            <div>
+              <p class="section-kicker"><span class="kicker-rule" aria-hidden="true"></span>公开记录 <span class="kicker-divider" aria-hidden="true">·</span> <span class="latin">REGISTRY</span></p>
+              <h2 id="registry-title">名册全录</h2>
+              <p class="section-desc">以赞助金额为序，同额股东名次并列。使用上方检索框，可快速找到一位股东。</p>
+            </div>
+            <div class="registry-stamp" aria-hidden="true">
+              <span>名册</span>
+              <small>全录</small>
+            </div>
+          </header>
+
+          <div class="registry-meta">
+            <dl class="meta-strip">
+              <div>
+                <dt>数据来源</dt>
+                <dd class="meta-source" data-registry-value="source">—</dd>
+              </div>
+              <div>
+                <dt>最近更新</dt>
+                <dd data-registry-value="updated">—</dd>
+              </div>
+              <div>
+                <dt>名册收录</dt>
+                <dd><span data-registry-value="count">—</span> 位</dd>
+              </div>
+            </dl>
+            <p class="sort-note"><span class="sort-arrow" aria-hidden="true">↓</span> 金额由高到低</p>
+          </div>
+
+          <div class="registry-toolbar">
+            <div class="filter" role="search" aria-label="检索股东名册">
+              <label class="filter-label" for="shareholder-filter">检索姓名</label>
+              <div class="filter-control">
+                <svg class="filter-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <circle cx="10.5" cy="10.5" r="6.25"></circle>
+                  <path d="m15.2 15.2 4.3 4.3"></path>
+                </svg>
+                <input id="shareholder-filter" type="search" name="q" placeholder="输入股东姓名…" autocomplete="off" autocapitalize="off" spellcheck="false" aria-controls="registry-table" aria-describedby="filter-hint">
+                <button class="filter-clear" id="filter-clear" type="button" aria-label="清除检索" hidden>
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="m6 6 12 12M18 6 6 18"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <p class="filter-status" id="filter-status" role="status">名册载入中…</p>
+          </div>
+          <p class="sr-only" id="filter-hint">输入股东姓名可即时筛选名册；按 Esc 键清除检索条件。</p>
+
+          <div class="table-frame">
+            <table class="registry-table" id="registry-table" role="table" aria-labelledby="registry-title" aria-describedby="registry-summary">
+              <caption class="sr-only">股东名册，按赞助金额由高到低排列，同额股东名次并列。</caption>
+              <colgroup>
+                <col class="col-rank">
+                <col class="col-name">
+                <col class="col-amount">
+                <col class="col-share">
+              </colgroup>
+              <thead role="rowgroup">
+                <tr role="row">
+                  <th scope="col" role="columnheader" class="cell-rank">名次</th>
+                  <th scope="col" role="columnheader" class="cell-name">股东</th>
+                  <th scope="col" role="columnheader" class="cell-amount">赞助金额</th>
+                  <th scope="col" role="columnheader" class="cell-share">占总额比例</th>
+                </tr>
+              </thead>
+              <tbody id="registry-body" role="rowgroup">
+                <tr class="registry-loading" role="row">
+                  <td colspan="4" role="cell">
+                    <span class="loading-mark" aria-hidden="true">册</span>
+                    <span>正在载入名册…</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="sr-only" id="registry-summary">股东名册载入中。</p>
+          <noscript>
+            <p class="noscript-note">名册需要启用 JavaScript 才能载入，请在浏览器中允许脚本后刷新页面。</p>
+          </noscript>
+
+          <div class="registry-footnote">
+            <p><span class="footnote-mark" aria-hidden="true">注</span> 名册数据来源为 <span data-registry-value="source">—</span>，币种为人民币（CNY）。</p>
+            <p class="footnote-seal" aria-hidden="true">公开名录</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-top">
+        <a class="footer-brand" href="index.html" aria-label="返回莫影的个人网站首页">
+          <span class="footer-emblem logo-shell" data-logo-shell>
+            <span class="footer-fallback" aria-hidden="true">TK</span>
+            <img src="assets/img/logo-64.png" width="64" height="64" alt="TK联合协会徽标" loading="lazy">
+          </span>
+          <span class="footer-brandcopy">
+            <span class="footer-name">莫影的个人网站</span>
+            <span class="footer-note">TK联合协会 · 公开名册与个人页面</span>
+          </span>
+        </a>
+        <nav class="footer-nav" aria-label="页脚导航">
+          <a href="index.html" aria-current="page">股东名册</a>
+          <a href="about.html">关于</a>
+          <a href="projects.html">项目</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 莫影的个人网站</p>
+        <p>静态站点 · 数据以名册所示更新日期为准</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

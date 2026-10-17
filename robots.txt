@@ -1,0 +1,9 @@
+# robots.txt —— 允许所有搜索引擎抓取整站
+# 语法:# 开头是注释,User-agent / Allow / Disallow / Sitemap 是有效指令。
+
+User-agent: *
+Allow: /
+
+# 站点地图:本站目前没有生成 sitemap.xml,所以下面这行先注释掉。
+# 以后如果加了 sitemap.xml,把 # 去掉,并把 <你的域名> 换成真实域名(例如 www.abc.com):
+# Sitemap: https://<你的域名>/sitemap.xml
