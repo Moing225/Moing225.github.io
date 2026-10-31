@@ -3260,3 +3260,654 @@ button {
     background: Highlight;
   }
 }
+
+/* ---- project page additions ---- */
+
+/* 首页 · 新项目提示条：细长一条，不与名册争视觉重心 */
+.site-notice {
+  border-block: 1px solid var(--line);
+  background: var(--paper-soft);
+}
+
+.site-notice-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding-block: 7px;
+}
+
+.site-notice-text {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-width: 0;
+  margin: 0;
+  color: var(--ink-soft);
+  font-family: var(--font-ui);
+  font-size: 11px;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+}
+
+.site-notice-flag {
+  flex: none;
+  padding: 1px 7px;
+  border: 1px solid var(--vermillion);
+  background: var(--vermillion-wash);
+  color: var(--vermillion);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.7;
+}
+
+.site-notice-sep {
+  margin-inline: 5px;
+  color: var(--line-strong);
+}
+
+.site-notice-text strong {
+  color: var(--vermillion-deep);
+  font-weight: 650;
+}
+
+.site-notice-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex: none;
+  padding-bottom: 1px;
+  border-bottom: 1px solid var(--gold-soft);
+  color: var(--vermillion);
+  font-family: var(--font-ui);
+  font-size: 10.5px;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  line-height: 1.6;
+  text-decoration: none;
+  transition: border-color 150ms ease, color 150ms ease;
+}
+
+.site-notice-link:hover {
+  border-bottom-color: var(--vermillion);
+  color: var(--vermillion-deep);
+}
+
+.site-notice + .registry {
+  padding-top: clamp(18px, 2.4vw, 26px);
+}
+
+/* 项目页 · 股东告知声明块 */
+.project-notice {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 20px;
+  margin: 0 0 clamp(18px, 2.4vw, 26px);
+  padding: 16px 22px;
+  border: 2px solid var(--vermillion);
+  background-color: var(--paper-raised);
+  background-image: linear-gradient(var(--vermillion-wash), var(--vermillion-wash));
+  box-shadow:
+    inset 0 0 0 3px var(--paper-raised),
+    inset 0 0 0 4px var(--gold-soft),
+    var(--shadow-soft);
+}
+
+.project-notice-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 7px;
+  padding: 2px 9px;
+  background: var(--button-bg);
+  color: var(--button-ink);
+  font-family: var(--font-ui);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  line-height: 1.7;
+}
+
+.project-notice-title {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: clamp(1.04rem, 1.7vw, 1.38rem);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1.55;
+}
+
+.project-notice-title strong {
+  color: var(--vermillion-deep);
+  font-weight: 700;
+  box-shadow: inset 0 -0.42em var(--gold-wash);
+}
+
+.project-notice-note {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-family: var(--font-ui);
+  font-size: 11.5px;
+  line-height: 1.7;
+}
+
+.project-notice-seal {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 74px;
+  height: 74px;
+  transform: rotate(-4deg);
+  border-radius: 50%;
+  background: radial-gradient(circle at 34% 27%, var(--button-bg), var(--button-bg-hover) 76%);
+  color: var(--button-ink);
+  font-family: var(--font-display);
+  box-shadow: 0 0 0 2px var(--paper-raised), 0 0 0 3px var(--gold);
+}
+
+.project-notice-seal span {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.15;
+}
+
+.project-notice-seal small {
+  margin-top: 3px;
+  font-family: var(--font-ui);
+  font-size: 7px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  line-height: 1.3;
+}
+
+/* 项目页 · 正文版式 */
+.project-sheet {
+  padding: clamp(20px, 2.8vw, 30px) clamp(20px, 3vw, 34px) clamp(22px, 3vw, 30px);
+}
+
+.project-title-block {
+  padding-bottom: clamp(14px, 2vw, 18px);
+}
+
+.project-title-block h2 {
+  margin: 4px 0 0;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: clamp(1.36rem, 2.3vw, 1.82rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+}
+
+.project-title-en {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-family: var(--font-ui);
+  font-size: 9.5px;
+  letter-spacing: 0.15em;
+  line-height: 1.7;
+  text-transform: uppercase;
+}
+
+.project-lede {
+  max-width: 68ch;
+  margin: 12px 0 0;
+  color: var(--ink-soft);
+  font-size: 13.5px;
+  line-height: 1.95;
+}
+
+.project-lede strong {
+  color: var(--ink);
+  font-weight: 650;
+}
+
+/* 中文断行：尽量避免行末只剩一两个字 */
+.page--projects .intro-copy p,
+.page--projects .project-lede,
+.page--projects .project-callout p,
+.page--projects .project-notice-title,
+.page--projects .project-notice-note,
+.page--projects .model-copy,
+.page--projects .choice-list dd,
+.page--projects .gate-title,
+.page--projects .gate-break {
+  text-wrap: pretty;
+}
+
+.project-section {
+  display: grid;
+  grid-template-columns: minmax(0, 176px) minmax(0, 1fr);
+  gap: 4px clamp(22px, 3vw, 40px);
+  padding-block: clamp(19px, 2.4vw, 27px);
+  border-top: 1px solid var(--line);
+}
+
+.project-label {
+  min-width: 0;
+}
+
+.project-index {
+  display: block;
+  margin-top: 7px;
+  color: var(--muted);
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+
+.project-body {
+  min-width: 0;
+}
+
+.project-body h3 {
+  margin: 0 0 10px;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: clamp(1.24rem, 1.9vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 1.45;
+}
+
+.project-body > * + * {
+  margin-top: clamp(12px, 1.6vw, 16px);
+}
+
+.project-subhead {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 1.04rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+
+.project-callout {
+  margin: 0;
+  padding: 13px 16px;
+  border-left: 2px solid var(--gold);
+  background: var(--paper-soft);
+}
+
+.project-callout p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 12.5px;
+  line-height: 1.9;
+}
+
+.project-callout strong {
+  color: var(--vermillion-deep);
+  font-weight: 650;
+}
+
+.project-list {
+  margin: 0;
+  padding-left: 17px;
+}
+
+.project-list li {
+  color: var(--ink-soft);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.project-list li + li {
+  margin-top: 4px;
+}
+
+.project-list strong {
+  color: var(--ink);
+  font-weight: 650;
+}
+
+.project-fineprint {
+  margin: 0;
+  padding-top: 9px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-family: var(--font-ui);
+  font-size: 9.5px;
+  letter-spacing: 0.02em;
+  line-height: 1.8;
+}
+
+/* 双模型对照 */
+.model-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.model-card {
+  padding: 15px 16px 16px;
+  border: 1px solid var(--line);
+  border-top: 2px solid var(--vermillion);
+  background: var(--paper);
+}
+
+.model-card:nth-child(2) {
+  border-top-color: var(--gold);
+}
+
+.model-tag {
+  margin: 0 0 7px;
+  color: var(--gold-ink);
+  font-family: var(--font-ui);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.6;
+}
+
+.model-name {
+  margin: 0 0 7px;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+}
+
+.model-copy {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 12.5px;
+  line-height: 1.9;
+}
+
+.model-foot {
+  margin: 10px 0 0;
+  padding-top: 8px;
+  border-top: 1px dotted var(--line-strong);
+  color: var(--muted);
+  font-family: var(--font-ui);
+  font-size: 9.5px;
+  letter-spacing: 0.03em;
+  line-height: 1.7;
+}
+
+/* 一个标量，三个通道 */
+.channel-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.channel-item {
+  padding: 13px 14px 14px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.channel-head {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 1.4;
+}
+
+.channel-param {
+  margin: 2px 0 9px;
+  color: var(--gold-ink);
+  font-family: var(--font-ui);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+}
+
+.channel-effect {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 11.5px;
+  line-height: 1.75;
+}
+
+.channel-effect + .channel-effect {
+  margin-top: 5px;
+}
+
+.channel-effect span {
+  display: inline-block;
+  min-width: 14px;
+  margin-right: 4px;
+  color: var(--vermillion);
+  font-family: var(--font-ui);
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* 设计取舍 */
+.choice-list {
+  margin: 0;
+}
+
+.choice-list > div {
+  padding: 12px 0;
+  border-top: 1px dotted var(--line-strong);
+}
+
+.choice-list > div:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.choice-list dt {
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1.55;
+}
+
+.choice-list dd {
+  margin: 5px 0 0;
+  color: var(--ink-soft);
+  font-size: 12.5px;
+  line-height: 1.9;
+}
+
+/* 失败判据 */
+.gate-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gate-item {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr);
+  gap: 0 14px;
+  padding: 11px 0;
+  border-top: 1px dotted var(--line-strong);
+}
+
+.gate-item:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.gate-id {
+  color: var(--vermillion);
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.85;
+}
+
+.gate-body {
+  min-width: 0;
+}
+
+.gate-title {
+  margin: 0;
+  color: var(--ink);
+  font-size: 12.5px;
+  font-weight: 650;
+  line-height: 1.85;
+}
+
+.gate-break {
+  margin: 3px 0 0;
+  color: var(--muted);
+  font-size: 11.5px;
+  line-height: 1.8;
+}
+
+.gate-break strong {
+  color: var(--vermillion-deep);
+  font-weight: 650;
+}
+
+/* 局限 */
+.project-caveat {
+  margin: 0;
+  padding: 14px 16px;
+  border: 1px dashed var(--line-strong);
+  background: var(--paper);
+}
+
+.project-caveat .project-list li {
+  font-size: 12.5px;
+  line-height: 1.85;
+}
+
+/* 页尾操作 */
+.project-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: clamp(16px, 2vw, 22px);
+  padding-top: clamp(16px, 2vw, 22px);
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 960px) {
+  .project-section {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .project-label {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .project-index {
+    margin-top: 0;
+    font-size: 1rem;
+  }
+
+  .model-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .channel-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .site-notice-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding-block: 8px;
+  }
+
+  .site-notice-text {
+    font-size: 10.5px;
+  }
+
+  .project-notice {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    padding: 14px 16px;
+  }
+
+  .project-notice-seal {
+    display: none;
+  }
+
+  .project-notice-title {
+    font-size: 1rem;
+  }
+
+  .project-notice-note {
+    font-size: 10.5px;
+  }
+
+  .project-sheet {
+    padding: 18px 16px 20px;
+  }
+
+  .project-title-en {
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+  }
+
+  .project-lede {
+    font-size: 12.5px;
+    line-height: 1.9;
+  }
+
+  .project-section {
+    padding-block: 17px;
+  }
+
+  .project-body h3 {
+    font-size: 1.2rem;
+  }
+
+  .project-index {
+    font-size: 0.95rem;
+  }
+
+  .project-callout {
+    padding: 12px 13px;
+  }
+
+  .project-callout p {
+    font-size: 12px;
+    line-height: 1.85;
+  }
+
+  .project-list li,
+  .project-caveat .project-list li {
+    font-size: 12px;
+  }
+
+  .gate-item {
+    grid-template-columns: 38px minmax(0, 1fr);
+    gap: 0 10px;
+  }
+
+  .project-fineprint {
+    font-size: 9px;
+  }
+}

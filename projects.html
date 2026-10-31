@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>项目 · 莫影的个人网站</title>
-  <meta name="description" content="莫影的个人网站项目页。项目正在建设中，敬请期待。">
+  <meta name="description" content="莫影的个人网站项目页：以情绪为调度中枢的双模型闭环人格系统，系统设计文档 v1.0，目前处于设计阶段。本项目为非盈利性项目，不动用股金。">
   <meta name="theme-color" content="#F7F1E1">
   <meta name="theme-color" content="#14110E" media="(prefers-color-scheme: dark)">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:site_name" content="莫影的个人网站">
-  <meta property="og:title" content="项目 · 莫影的个人网站">
-  <meta property="og:description" content="莫影的个人网站项目页。项目正在建设中，敬请期待。">
+  <meta property="og:title" content="项目 · 以情绪为调度中枢的双模型闭环人格系统">
+  <meta property="og:description" content="一项尚在设计阶段的个人项目：两个小模型分工，一个管情绪与联想，一个负责检索与说话，彼此不合并权重，只传递状态。本项目为非盈利性项目，不动用股金。">
   <meta property="og:image" content="assets/img/logo-square-512.png">
   <meta property="og:image:alt" content="TK联合协会徽标">
   <meta property="og:image:width" content="512">
@@ -61,44 +61,370 @@
             <span>ARCHIVE</span>
           </span>
         </div>
-        <p class="inner-lede">未来的项目与作品，将在这里登记公开。现在还没有发布内容。</p>
+        <p class="inner-lede">目前登记一项：一个还停在设计阶段的人格系统，不产生收入，也不动用股金。</p>
       </div>
     </section>
 
     <div class="wrap projects-stage">
-      <section class="empty-register paper-panel" aria-labelledby="projects-empty-title">
+      <section class="project-notice" aria-labelledby="notice-title">
+        <div class="project-notice-body">
+          <p class="project-notice-label">股东告知 <span aria-hidden="true">·</span> NOTICE</p>
+          <p class="project-notice-title" id="notice-title">本项目为非盈利性项目 · 不涉及任何商业收入 · <strong>不动用股金</strong></p>
+          <p class="project-notice-note">股东名册中的赞助仅用于记录与致谢；本项目的预算由站主自行承担（≤ 100 元）。</p>
+        </div>
+        <span class="project-notice-seal" aria-hidden="true">
+          <span>非盈利</span>
+          <small>不动股金</small>
+        </span>
+      </section>
+
+      <section class="registry-panel empty-register" aria-labelledby="project-title">
         <div class="empty-register-head">
-          <p class="record-label"><span class="record-dot" aria-hidden="true"></span>项目登记簿 <span class="kicker-divider" aria-hidden="true">·</span> <span class="latin">PROJECT REGISTER</span></p>
-          <span class="status-chip">建设中</span>
+          <p class="record-label"><span class="record-dot" aria-hidden="true"></span>项目登记簿 <span class="kicker-divider" aria-hidden="true">·</span> <span class="latin">PROJECT REGISTER</span> <span class="kicker-divider" aria-hidden="true">·</span> ENTRY 001</p>
+          <span class="status-chip">设计阶段</span>
         </div>
 
-        <div class="empty-state">
-          <div class="empty-art" aria-hidden="true">
-            <span class="empty-orbit"></span>
-            <span class="empty-axis empty-axis--x"></span>
-            <span class="empty-axis empty-axis--y"></span>
-            <span class="empty-tick empty-tick--one"></span>
-            <span class="empty-tick empty-tick--two"></span>
-            <div class="construction-seal">
-              <span>待</span>
-              <small>续</small>
+        <div class="registry-meta">
+          <dl class="meta-strip">
+            <div>
+              <dt>状态</dt>
+              <dd>设计阶段 · 设计文档 v1.0</dd>
             </div>
-            <span class="empty-art-label">NO ENTRIES</span>
-          </div>
+            <div>
+              <dt>预算</dt>
+              <dd>≤ 100 元，自行承担</dd>
+            </div>
+            <div>
+              <dt>硬件</dt>
+              <dd>i5-13500H / 16 GB</dd>
+            </div>
+            <div>
+              <dt>周期</dt>
+              <dd>2–3 周</dd>
+            </div>
+          </dl>
+          <p class="sort-note"><span class="sort-arrow" aria-hidden="true">·</span> 不报告实验结果</p>
+        </div>
 
-          <p class="empty-kicker">ENTRY 000 <span aria-hidden="true">·</span> 暂无条目</p>
-          <h2 id="projects-empty-title">项目正在建设中，敬请期待</h2>
-          <p class="empty-copy">这里还没有已发布的项目或作品。等真实的项目完成之后，会在这里登记、公开。</p>
-          <div class="empty-actions">
-            <a class="button button--primary" href="index.html">先看股东名册</a>
+        <div class="project-sheet">
+          <header class="project-title-block">
+            <p class="section-kicker"><span class="kicker-rule" aria-hidden="true"></span>登记项目 一 <span class="kicker-divider" aria-hidden="true">·</span> <span class="latin">PERSONA SYSTEM</span></p>
+            <h2 id="project-title">以情绪为调度中枢的双模型闭环人格系统</h2>
+            <p class="project-title-en">Emotion as a Scheduler — A Two-Model Closed-Loop Persona Architecture</p>
+            <p class="project-lede">两个很小的语言模型分工：一个只负责「此刻心里是什么天气」，另一个照这个天气去翻抽屉，再把话说出来。两者不合并成一个模型，中间只传一张巴掌大的便条。<strong>现在它是一份设计文档，还没有做完，也没有实验结果。</strong></p>
+          </header>
+
+          <section class="project-section" aria-labelledby="p-story">
+            <div class="project-label">
+              <p class="section-kicker"><span class="kicker-rule" aria-hidden="true"></span>先说清楚 <span class="kicker-divider" aria-hidden="true">·</span> <span class="latin">PLAIN WORDS</span></p>
+              <span class="project-index" aria-hidden="true">01</span>
+            </div>
+            <div class="project-body">
+              <h3 id="p-story">一个人，一间老房子，一屋子抽屉</h3>
+              <div class="intro-copy">
+                <p>想象一个人住在一间老房子里。每天早上，他心里有一种天气。</p>
+                <p>天气好的时候，他愿意拉开很多抽屉，翻出很远的东西，脑子也跳得快。天气差的时候，他只拉开最近那个抽屉，看一眼就关上。</p>
+                <p>抽屉之间牵着绳子。绳子不是按「事有关」连的，是按「心情像」连的——所以「雨天的站牌」会连到「小学门口等妈妈」。</p>
+                <p>天气决定往哪个方向翻，但他自己负责真的去翻、挑哪一本、用什么腔调说出来。而翻到的东西，又回头改变他的天气。这是一个圈，这个圈就是「心情」的样子。</p>
+                <p>天气还有快慢：一句话能让天立刻阴下来，但那只是一阵风；要连着阴好几天，季节才会变。</p>
+                <p>没人来的时候，他一个人在屋里翻，翻着翻着，就只在同一个抽屉里打转——所以得有人时不时跟他说句话。</p>
+              </div>
+              <div class="project-callout">
+                <p>这个项目要做的，就是把这间屋子装进两个小模型里：一个管天气，一个管翻抽屉。它想试的不是「让 AI 有情绪」，而是——<strong>一层很薄的情绪状态，能不能真的改变一个系统的注意、记忆和说话方式。</strong></p>
+              </div>
+            </div>
+          </section>
+
+          <section class="project-section" aria-labelledby="p-arch">
+            <div class="project-label">
+              <p class="section-kicker"><span class="kicker-rule" aria-hidden="true"></span>构成 <span class="kicker-divider" aria-hidden="true">·</span> <span class="latin">ARCHITECTURE</span></p>
+              <span class="project-index" aria-hidden="true">02</span>
+            </div>
+            <div class="project-body">
+              <h3 id="p-arch">两个模型，各管一件事，不合并权重</h3>
+              <div class="intro-copy">
+                <p>系统由两个独立后训练的小模型组成。「0.5B」「1.5B」是参数量，可以粗略理解成模型的脑容量：五亿、十五亿个参数，都在一台普通笔记本上跑得动。</p>
+              </div>
+              <div class="model-grid">
+                <article class="model-card">
+                  <p class="model-tag">B 模型 <span aria-hidden="true">·</span> 0.5B <span aria-hidden="true">·</span> base</p>
+                  <h4 class="model-name">管天气和联想，不发声</h4>
+                  <p class="model-copy">每轮只吐出一张「意图卡」——一张只写方向、不写内容的便条：此刻心情是好是坏（效价 v）、有多激动（唤醒 a）、该往哪个方向翻（检索方向）、脑子里浮起什么画面（意象）、翻多远（联想宽度 breadth）、用哪种方式想（mode）。总长不超过 50 token（大约几十个字）。</p>
+                  <p class="model-foot">温度 1.1 / top_p 0.95 · 不参与训练</p>
+                </article>
+                <article class="model-card">
+                  <p class="model-tag">A 模型 <span aria-hidden="true">·</span> 1.5B <span aria-hidden="true">·</span> instruct + 轻量 LoRA</p>
+                  <h4 class="model-name">负责检索、验收，和真的开口</h4>
+                  <p class="model-copy">拿到便条后，它先去记忆库里粗筛，沿联想边扩散几跳，再把候选一条条过一遍——「这几条里，哪条让我想说话？」——它有权全部否决。然后才把话说出来。LoRA 是一种只训练一小块附加参数、不动原模型的微调方式，在这里只用来改变表达形式。</p>
+                  <p class="model-foot">温度 0.75 / top_p 0.90 · 轻量 LoRA</p>
+                </article>
+              </div>
+              <div class="project-callout">
+                <p>两者<strong>不合并权重，只传递状态</strong>：唯一的联系就是那张便条。权重合并是在参数空间里做平均，不是功能上的复合；对两个目标正交的适配器，合并更像互相干扰。所以「合并」在这个项目里只作为消融实验的对照组存在。</p>
+              </div>
+              <h4 class="project-subhead">一张意图卡，六个字段</h4>
+              <dl class="fact-list">
+                <div>
+                  <dt>v 效价</dt>
+                  <dd>−1 到 1：这一刻是好还是不好</dd>
+                </div>
+                <div>
+                  <dt>a 唤醒</dt>
+                  <dd>0 到 1：有多激动</dd>
+                </div>
+                <div>
+                  <dt>direction</dt>
+                  <dd>检索方向：往哪个方向翻</dd>
+                </div>
+                <div>
+                  <dt>image</dt>
+                  <dd>意象：此刻浮起的具体画面（具体优于抽象）</dd>
+                </div>
+                <div>
+                  <dt>breadth</dt>
+                  <dd>联想宽度 0–1：翻多远的抽屉</dd>
+                </div>
+                <div>
+                  <dt>mode</dt>
+                  <dd>推理方式：直觉 / 类比 / 否证 / 回忆</dd>
+                </div>
+              </dl>
+              <p class="project-fineprint">六个字段全是数值或短语。没有一句话是写给人看的——它们只用来决定方向，不承载内容。</p>
+            </div>
+          </section>
+
+          <section class="project-section" aria-labelledby="p-scalar">
+            <div class="project-label">
+              <p class="section-kicker"><span class="kicker-rule" aria-hidden="true"></span>核心机制 <span class="kicker-divider" aria-hidden="true">·</span> <span class="latin">ONE SCALAR</span></p>
+              <span class="project-index" aria-hidden="true">03</span>
+            </div>
+            <div class="project-body">
+              <h3 id="p-scalar">一个 openness，同时拧三个旋钮</h3>
+              <div class="intro-copy">
+                <p>整个系统只有一个总开关：openness，一个被钳在 0.25 到 0.8 之间的数，由当前情绪算出来——心情好、又不太激动时它高，心情差、又很激动时它低。它同时决定三件事。</p>
+              </div>
+              <ul class="channel-list">
+                <li class="channel-item">
+                  <p class="channel-head">听多少</p>
+                  <p class="channel-param">门限 θ = 1 − openness</p>
+                  <p class="channel-effect"><span>高</span>保留更多片段，并把高显著度的放到末尾</p>
+                  <p class="channel-effect"><span>低</span>只留最刺耳的那一句</p>
+                </li>
+                <li class="channel-item">
+                  <p class="channel-head">想多远</p>
+                  <p class="channel-param">联想宽度 breadth</p>
+                  <p class="channel-effect"><span>高</span>多跳、远联想</p>
+                  <p class="channel-effect"><span>低</span>单跳，只翻最近那个抽屉</p>
+                </li>
+                <li class="channel-item">
+                  <p class="channel-head">怎么想</p>
+                  <p class="channel-param">推理方式 mode</p>
+                  <p class="channel-effect"><span>高</span>类比、直觉</p>
+                  <p class="channel-effect"><span>低</span>否证、抠细节</p>
+                </li>
+              </ul>
+              <div class="project-callout">
+                <p>过滤做的是「删掉片段」，不是「调小音量」。因为人在注意收窄时的表现就是删除：紧张的时候，人不是听见所有人但都变小声，而是<strong>只看见那张脸</strong>。</p>
+              </div>
+              <p class="project-fineprint">三个通道同向变化的经验依据：积极情绪拓宽认知（Fredrickson, 2001）；唤醒升高收窄注意（Easterbrook, 1959）；心境影响加工方式（Forgas, 1995）。</p>
+            </div>
+          </section>
+
+          <section class="project-section" aria-labelledby="p-emotion">
+            <div class="project-label">
+              <p class="section-kicker"><span class="kicker-rule" aria-hidden="true"></span>情绪建模 <span class="kicker-divider" aria-hidden="true">·</span> <span class="latin">FOUR SCALES</span></p>
+              <span class="project-index" aria-hidden="true">04</span>
+            </div>
+            <div class="project-body">
+              <h3 id="p-emotion">情绪有四层，快慢不一样</h3>
+              <dl class="fact-list">
+                <div>
+                  <dt>L0 瞬时</dt>
+                  <dd>0.5–1 轮：一句话当场变脸</dd>
+                </div>
+                <div>
+                  <dt>L1 快情绪</dt>
+                  <dd>2–5 轮：一句话留下的情绪残留</dd>
+                </div>
+                <div>
+                  <dt>L2 心境</dt>
+                  <dd>20–50 轮：这一阵子的底色</dd>
+                </div>
+                <div>
+                  <dt>L3 气质</dt>
+                  <dd>200+ 轮：这个人一直是这个人</dd>
+                </div>
+              </dl>
+              <div class="project-callout">
+                <p>关键在更新规则里：快层往下衰减时，回落的目标不是零，而是<strong>此刻的心境</strong>。于是「心情好的时候被责备，气消了还是心情好」不需要额外写规则，它自己就长出来了。</p>
+              </div>
+              <div class="intro-copy">
+                <p>另外还加了一层对抗过程，用来产生情绪过冲：被吓一跳之后，情绪不会平滑地回到原位，而是先越过基线、反向荡一下，再慢慢爬回来。参数上有一条硬约束——补偿强度 k 必须小于 1，否则在闭环里会越振越大。</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="project-section" aria-labelledby="p-memory">
+            <div class="project-label">
+              <p class="section-kicker"><span class="kicker-rule" aria-hidden="true"></span>分层记忆 <span class="kicker-divider" aria-hidden="true">·</span> <span class="latin">ADJACENCY</span></p>
+              <span class="project-index" aria-hidden="true">05</span>
+            </div>
+            <div class="project-body">
+              <h3 id="p-memory">抽屉之间，按「心情像」连</h3>
+              <div class="intro-copy">
+                <p>记忆分四层：事件层存原始片段、情绪标签和意象；联想层存片段之间带权重的边；叙事层每 50 轮压缩一次「最近我是谁」；气质层几乎冻结，是人格的锚，存在 LoRA 和人格卡里。</p>
+                <p>关键是，联想边<strong>不用语义相似度</strong>。语义相似度连出来的是「主题相关」，那是搜索。这里用的是情绪邻近：两个片段只要效价和唤醒都接近（|Δv| + |Δa| &lt; 0.4），而且时间隔得够远，就连一条边；每被共同激活一次，边就加粗一点（赫布式增强）。</p>
+              </div>
+              <div class="project-callout">
+                <p>所以「雨天的站牌」连到的是「小学门口等妈妈」，不是「公交车」。</p>
+              </div>
+              <div class="intro-copy">
+                <p>检索把意图和执行分开：B 决定朝哪个方向找，但不对结果负责；A 对结果负责，但不决定朝向。这对应一件很具体的事——<strong>你可以决定想回忆什么，却没法命令自己想起一件愉快的事。</strong></p>
+              </div>
+            </div>
+          </section>
+
+          <section class="project-section" aria-labelledby="p-choices">
+            <div class="project-label">
+              <p class="section-kicker"><span class="kicker-rule" aria-hidden="true"></span>设计取舍 <span class="kicker-divider" aria-hidden="true">·</span> <span class="latin">WHY THESE</span></p>
+              <span class="project-index" aria-hidden="true">06</span>
+            </div>
+            <div class="project-body">
+              <h3 id="p-choices">每一个选择，都有一个被拒绝的理由</h3>
+              <dl class="choice-list">
+                <div>
+                  <dt>为什么 B 用 base，而不是 instruct？</dt>
+                  <dd>instruct 模型被对齐训练过，天生倾向于把散乱的联想整理成条理——而这正是这里要的反面。base 的「不通顺」本身就是自由联想：需要的能力本来就在里面，只是在指令对齐的时候被抹掉了。这是整个设计里最省钱、也最关键的一个选择。</dd>
+                </div>
+                <div>
+                  <dt>为什么意图卡必须 ≤ 50 token？</dt>
+                  <dd>带宽一高，A 就会去「理解」B 的情绪，然后把它拉回训练分布里的平均值，通道的实际信息量趋近于零。字段化、短化、数值化，是为了逼它执行，而不是让它理解。</dd>
+                </div>
+                <div>
+                  <dt>为什么联想边不用语义相似度？</dt>
+                  <dd>因为语义相似度产出的是搜索，不是联想。按「心情像」连出来的东西，更接近人自己记事情的方式。</dd>
+                </div>
+                <div>
+                  <dt>为什么不在 1.5B 上训练推理能力？</dt>
+                  <dd>这个量级的思维链常常是负收益：生成看似合理、实则错误的步骤，然后坚持执行，产出更长的自信谬误。改用固定槽位——看到 / 好奇 / 想起 / 要做——槽位名本身构成一种思维形状，四格就是一个「凭直觉与联想行事」的人；换一套槽位名（比如 前提 / 反驳 / 让步 / 结论）就是换一个人格，不必重训。</dd>
+                </div>
+                <div>
+                  <dt>为什么每个模块都要设击穿阈值？</dt>
+                  <dd>因为测不出差异的模块就是装饰，应当删掉。没有失败判据的项目，无法区分「真的涌现」和「叙事好听」。</dd>
+                </div>
+              </dl>
+            </div>
+          </section>
+
+          <section class="project-section" aria-labelledby="p-gates">
+            <div class="project-label">
+              <p class="section-kicker"><span class="kicker-rule" aria-hidden="true"></span>失败判据 <span class="kicker-divider" aria-hidden="true">·</span> <span class="latin">FALSIFIABILITY</span></p>
+              <span class="project-index" aria-hidden="true">07</span>
+            </div>
+            <div class="project-body">
+              <h3 id="p-gates">每个模块，都安排了一次「处死」的机会</h3>
+              <div class="intro-copy">
+                <p>设计文档给每个模块都写了消融条件和击穿阈值：哪一个指标测不出差异，就说明这个模块是装饰。四组消融条件各跑 200 轮，固定随机种子。</p>
+              </div>
+              <ol class="gate-list">
+                <li class="gate-item">
+                  <span class="gate-id">P0</span>
+                  <div class="gate-body">
+                    <p class="gate-title">消融：把 B 换成一张固定的空意图卡，或换成随机噪声，或换成 A 自身上一轮的摘要。</p>
+                    <p class="gate-break">击穿：真实 B 与其他条件在至少两项指标上没有显著差异 → <strong>B 冗余，方案终止</strong>。</p>
+                  </div>
+                </li>
+                <li class="gate-item">
+                  <span class="gate-id">P1</span>
+                  <div class="gate-body">
+                    <p class="gate-title">带宽：固定上下文，只改 v 一个数值，看保留片段数、检索跳数、输出分布的 KL 散度（衡量两组输出差多远的一个数）是否同向变化。</p>
+                    <p class="gate-break">击穿：KL 趋近 0 → <strong>通道失效，重做接口</strong>。</p>
+                  </div>
+                </li>
+                <li class="gate-item">
+                  <span class="gate-id">P2</span>
+                  <div class="gate-body">
+                    <p class="gate-title">动力学：阻尼 × 噪声的 3×3 网格，每格 5 个随机种子，观察稳态跳跃率与记忆调用多样性。</p>
+                    <p class="gate-break">击穿：找不到「既不死锁也不碎裂」的中间区 → <strong>系统本质单稳态</strong>。</p>
+                  </div>
+                </li>
+                <li class="gate-item">
+                  <span class="gate-id">P3</span>
+                  <div class="gate-body">
+                    <p class="gate-title">人格：30 轮之内，人格还在不在。</p>
+                    <p class="gate-break">击穿：20 轮内就滑回助手腔 → <strong>训练数据设计失败</strong>。</p>
+                  </div>
+                </li>
+                <li class="gate-item">
+                  <span class="gate-id">P4</span>
+                  <div class="gate-body">
+                    <p class="gate-title">长程：100 轮之后，人格得分掉幅是否小于 20%。</p>
+                    <p class="gate-break">击穿：掉幅超过 50% → <strong>对外展示不成立</strong>。</p>
+                  </div>
+                </li>
+              </ol>
+              <p class="project-fineprint">评测采用盲评：四组日志打乱顺序、去掉组标签，再交给强模型按五个维度打分（连贯性 / 新颖性 / 深度 / 人格一致性 / 独白是否支撑落点）。不盲评，分数就会向实验组偏移。文档把话说死了：若 P0 或 P1 没有通过，整个双模型假设就应当放弃，退回单模型双人格的基线。</p>
+            </div>
+          </section>
+
+          <section class="project-section" aria-labelledby="p-why">
+            <div class="project-label">
+              <p class="section-kicker"><span class="kicker-rule" aria-hidden="true"></span>为什么做 <span class="kicker-divider" aria-hidden="true">·</span> <span class="latin">WHY THIS</span></p>
+              <span class="project-index" aria-hidden="true">08</span>
+            </div>
+            <div class="project-body">
+              <h3 id="p-why">现在的人格化对话，只有一条老路</h3>
+              <div class="intro-copy">
+                <p>主流做法是「单模型 + 系统提示词」：一个模型，一段人设提示词。这条路有三个老问题。</p>
+              </div>
+              <ul class="project-list">
+                <li><strong>人格漂移</strong>：长对话里，助手腔会慢慢压过角色设定。</li>
+                <li><strong>情绪沦为措辞装饰</strong>：情绪只体现在用词上，影响不了系统的注意和记忆。</li>
+                <li><strong>联想退化成搜索</strong>：检索靠语义相似度，产出的是「相关」，不是「想起」。</li>
+              </ul>
+              <div class="intro-copy">
+                <p>直觉的回应是训练两个专精模型再合并。但合并解决不了这件事：权重合并是在参数空间里做平均，不是功能上的复合。</p>
+                <p>这个项目走另一条路：不合并权重，只传递状态；把人格的稳定性从权重里挪到时间常数上——四层情绪的叠加本身，承担了「这个人一直是这个人」。这是它想提出的那条不同的路。</p>
+              </div>
+              <div class="project-callout">
+                <p>还有一层意义是工程态度上的：多数同类个人项目只有演示、没有失败判据，于是没人能区分「真的涌现」和「叙事好听」。这个项目想给个人级项目补上「可证伪」这一课——<strong>每个模块都必须能被消融、被测量、被删除</strong>。</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="project-section" aria-labelledby="p-limits">
+            <div class="project-label">
+              <p class="section-kicker"><span class="kicker-rule" aria-hidden="true"></span>局限 <span class="kicker-divider" aria-hidden="true">·</span> <span class="latin">LIMITS</span></p>
+              <span class="project-index" aria-hidden="true">09</span>
+            </div>
+            <div class="project-body">
+              <h3 id="p-limits">它自己写下的四条限制</h3>
+              <div class="project-caveat">
+                <ul class="project-list">
+                  <li>它<strong>不构成对任何认知理论的验证</strong>。一个能跑的系统是存在性示例，不是验证。</li>
+                  <li>闭环长期一定会收敛到窄吸引子（状态空间有限，反复绕同一条路）。用户输入是唯一的结构性熵源。</li>
+                  <li>1.5B 不具备真实推理能力；LoRA 只改变表达形式，不提升能力边界。</li>
+                  <li>盲评仍有长度偏好与格式偏好，只能缓解，无法消除。</li>
+                </ul>
+              </div>
+              <div class="intro-copy">
+                <p>这些是设计文档第 7 节自己写下的限制，不是事后补的免责声明。</p>
+              </div>
+            </div>
+          </section>
+
+          <div class="project-actions">
+            <a class="button button--primary" href="index.html">回到股东名册</a>
             <a class="text-link" href="about.html">了解本站 <span aria-hidden="true">→</span></a>
           </div>
         </div>
 
         <div class="empty-register-foot">
-          <span>状态：建设中</span>
+          <span>状态：设计阶段</span>
           <span aria-hidden="true">·</span>
-          <span>收录项目：0</span>
+          <span>收录项目：1</span>
+          <span aria-hidden="true">·</span>
+          <span>本文档不报告实验结果</span>
         </div>
       </section>
     </div>

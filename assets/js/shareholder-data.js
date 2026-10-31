@@ -4,139 +4,149 @@ window.__SHAREHOLDERS__ = {
     "siteName": "莫影的个人网站",
     "registryTitle": "股东名册",
     "currency": "CNY",
-    "updated": "2026-10-17",
+    "updated": "2026-10-31",
     "source": "股东表格.xlsx",
-    "total": 348.61,
-    "count": 26
+    "total": 459.81,
+    "count": 28
   },
   "shareholders": [
     {
       "rank": 1,
+      "name": "DiBo",
+      "amount": 100
+    },
+    {
+      "rank": 2,
       "name": "我是萧楚楠",
       "amount": 61
     },
     {
-      "rank": 2,
+      "rank": 3,
       "name": "柳贯一",
       "amount": 50
     },
     {
-      "rank": 2,
-      "name": "DiBo",
+      "rank": 3,
+      "name": "Miraitowa",
       "amount": 50
     },
     {
-      "rank": 4,
+      "rank": 5,
       "name": "Ray",
       "amount": 20
     },
     {
-      "rank": 5,
+      "rank": 6,
       "name": "在我下面的是GAY",
       "amount": 15
     },
     {
-      "rank": 6,
+      "rank": 7,
+      "name": "无人懂我心",
+      "amount": 10.7
+    },
+    {
+      "rank": 8,
       "name": "A1居士",
       "amount": 10.51
     },
     {
-      "rank": 7,
+      "rank": 9,
       "name": "ZmjjKK",
       "amount": 10.5
     },
     {
-      "rank": 8,
+      "rank": 9,
+      "name": "准备冬眠的鼠子",
+      "amount": 10.5
+    },
+    {
+      "rank": 11,
       "name": "左右",
       "amount": 10.1
     },
     {
-      "rank": 9,
+      "rank": 12,
       "name": "smythan",
       "amount": 10
     },
     {
-      "rank": 9,
+      "rank": 12,
       "name": "冷星",
       "amount": 10
     },
     {
-      "rank": 9,
+      "rank": 12,
       "name": "幸福一家人",
       "amount": 10
     },
     {
-      "rank": 9,
-      "name": "无人懂我心",
-      "amount": 10
-    },
-    {
-      "rank": 9,
+      "rank": 12,
       "name": "在我上面的是GAY",
       "amount": 10
     },
     {
-      "rank": 9,
+      "rank": 12,
       "name": "白茶",
       "amount": 10
     },
     {
-      "rank": 9,
+      "rank": 12,
       "name": "铅",
       "amount": 10
     },
     {
-      "rank": 9,
+      "rank": 12,
       "name": "ZZY",
       "amount": 10
     },
     {
-      "rank": 9,
+      "rank": 12,
       "name": "叔古",
       "amount": 10
     },
     {
-      "rank": 9,
+      "rank": 12,
       "name": "loml",
       "amount": 10
     },
     {
-      "rank": 9,
+      "rank": 12,
       "name": "余裕雨",
       "amount": 10
     },
     {
-      "rank": 20,
+      "rank": 22,
       "name": "芝士雪豹",
       "amount": 5
     },
     {
-      "rank": 21,
-      "name": "准备冬眠的鼠子",
+      "rank": 23,
+      "name": "Aurora",
       "amount": 2
     },
     {
-      "rank": 22,
+      "rank": 24,
       "name": "小令新梦",
       "amount": 1
     },
     {
-      "rank": 22,
+      "rank": 24,
       "name": "神",
       "amount": 1
     },
     {
-      "rank": 22,
+      "rank": 24,
       "name": "南风知我意",
       "amount": 1
     },
     {
-      "rank": 22,
+      "rank": 24,
       "name": "吃柠檬吃饱",
       "amount": 1
     },
     {
-      "rank": 26,
+      "rank": 28,
       "name": "宇宙无敌暴龙兽",
       "amount": 0.5
     }
